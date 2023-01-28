@@ -14,16 +14,24 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@assets/*": ["assets/*"],
+      "@styles/*": ["styles/*"],
+      "@components/*": ["app/components/*"],
+      "@common/*": ["app/components/common/*"],
+      "@layouts/*": ["app/components/layouts/*"],
+      "@modules/*": ["app/components/modules/*"],
+      "@constants/*": ["app/constants/*"],
+      "@hooks/*": ["app/hooks/*"],
+      "@contexts/*": ["app/contexts/*"],
+      "@redux/*": ["app/redux/*"],
+      "@types": ["app/types/index"],
+      "@enums": ["app/types/enums.ts"],
+      "@utils/*": ["app/utils/*"],
+    },
+    "allowSyntheticDefaultImports": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
